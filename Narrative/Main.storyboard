@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Play View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlayViewController" customModule="Narrative" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixb-I3-NvG">
+                                <rect key="frame" x="130" y="280" width="114" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="jse-NF-O93"/>
+                                    <constraint firstAttribute="width" constant="114" id="s1w-ao-D1a"/>
+                                </constraints>
+                                <state key="normal" title="button" image="headphone"/>
+                                <connections>
+                                    <action selector="getArticles:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDl-jg-PM2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pulse" translatesAutoresizingMaskIntoConstraints="NO" id="yaO-pc-NFt">
+                                <rect key="frame" x="67" y="212" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="3ME-IN-t4D"/>
+                                    <constraint firstAttribute="width" constant="240" id="yJa-wI-dIo"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ixb-I3-NvG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6eY-5q-Jhf"/>
+                            <constraint firstItem="yaO-pc-NFt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7HD-gl-Iec"/>
+                            <constraint firstItem="yaO-pc-NFt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IMC-Lp-yix"/>
+                            <constraint firstItem="ixb-I3-NvG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="isR-sC-n5s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qhc-UQ-ec5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="bwi-R2-iQw">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jdb-MU-X3i">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stations"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pulseImage" destination="yaO-pc-NFt" id="631-Mt-phq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2901.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Station View Controller-->
+        <scene sceneID="W5g-pu-FkV">
+            <objects>
+                <viewController id="k9K-H1-goo" customClass="StationViewController" customModule="Narrative" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tj9-4r-m7E"/>
+                        <viewControllerLayoutGuide type="bottom" id="KNT-6x-Mg6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dNu-eX-jJe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hvv-i5-cUY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationTableViewCell" rowHeight="44" id="ZPf-il-SnW" customClass="StationTableViewCell" customModule="Narrative" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZPf-il-SnW" id="YxI-wA-gG2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3f-fr-7B0" userLabel="Station Label">
+                                                    <rect key="frame" x="8" y="0.0" width="367" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="l3f-fr-7B0" secondAttribute="bottom" id="07W-CB-7LK"/>
+                                                <constraint firstItem="l3f-fr-7B0" firstAttribute="top" secondItem="YxI-wA-gG2" secondAttribute="top" id="126-C5-Q1d"/>
+                                                <constraint firstAttribute="trailing" secondItem="l3f-fr-7B0" secondAttribute="trailing" id="e9z-s0-DYG"/>
+                                                <constraint firstItem="l3f-fr-7B0" firstAttribute="leading" secondItem="YxI-wA-gG2" secondAttribute="leadingMargin" id="weE-dp-wrb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stationLabel" destination="l3f-fr-7B0" id="aQa-MV-RFJ"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="PlayViewController" id="8dQ-G7-wJ5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hvv-i5-cUY" secondAttribute="trailing" id="3xq-bX-NiD"/>
+                            <constraint firstItem="hvv-i5-cUY" firstAttribute="top" secondItem="dNu-eX-jJe" secondAttribute="top" id="ZNE-iK-v74"/>
+                            <constraint firstItem="hvv-i5-cUY" firstAttribute="bottom" secondItem="KNT-6x-Mg6" secondAttribute="top" id="gWT-Dy-V0I"/>
+                            <constraint firstItem="hvv-i5-cUY" firstAttribute="leading" secondItem="dNu-eX-jJe" secondAttribute="leading" id="oC7-L6-Est"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stationTableView" destination="hvv-i5-cUY" id="0fq-7R-KaQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3Z-7L-v7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3815" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="headphone" width="288" height="288"/>
+        <image name="pulse" width="720" height="720"/>
+    </resources>
+</document>

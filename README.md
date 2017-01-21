@@ -22,4 +22,3 @@ Feel free to make a PR and add more features! Narrative is proudly open source.
 ## License
 
 MIT License.
-# narrative
